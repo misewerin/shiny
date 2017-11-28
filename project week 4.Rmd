@@ -1,0 +1,60 @@
+---
+title: 'Course Project: Shiny Application and Reproducible Pitch'
+author: "Michael Sewerin"
+date: "28 November 2017"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+
+This is the documentation for the Course Project 'Shiny Application and Reproducible Pitch' of the Coursera course 'Developing Data Products' which is a part of the Data Science Specialization.
+
+The task was to build a shiny application which should include the following:
+
+1. Some form of input (widget: textbox, radio button, checkbox, ...)
+2. Some operation on the ui input in server.R
+3. Some reactive output displayed as a result of server calculations
+
+
+## About the application
+
+I wrote a simple application that takes a value in degree Celsius as input and calcuates the Fahrenheit value for it and prints it. Using the slider the user can select the value in Celsius.
+
+The application is running on:
+https://misewerin.shinyapps.io/Shiny_App/
+
+The code can be found in my github repository:
+https://github.com/misewerin/shiny/
+
+## Formula
+
+The formula I used to do the calculation is the following:
+
+```{r eval = FALSE}
+fahrenheitValue <- celsiusValue * 9/5 + 32
+```
+
+## Slide with example results
+
+```{r}
+celsiusValue <- 25
+fahrenheitValue <- celsiusValue * 9/5 + 32
+fahrenheitValue
+```
+
+```{r}
+celsiusValue <- 0
+fahrenheitValue <- celsiusValue * 9/5 + 32
+fahrenheitValue
+```
+
+```{r}
+celsiusValue <- 15
+fahrenheitValue <- celsiusValue * 9/5 + 32
+fahrenheitValue
+```
+
